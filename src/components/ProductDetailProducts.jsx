@@ -42,11 +42,11 @@ function SamplePrevArrow(props) {
   );
 }
 
-function BestProducts() {
+function ProductDetailProducts() {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     speed: 900,
@@ -82,14 +82,9 @@ function BestProducts() {
   return (
     <div className="w-[90%] m-auto my-20">
       <div className="flex justify-between items-center pl-6 pr-8">
-        <h3 className="w-2/3 text-5xl font-bold text-[#36a8c2] pb-20">
-          İhtiyacınıza Uygun Başlıca Ürünlerimiz
+        <h3 className="w-2/3 text-4xl font-medium text-[#36a8c2] pb-20">
+          Benzer Ürünler
         </h3>
-        <div className="">
-          <button className="px-5 py-3 rounded-3xl text-2xl font-semibold text-white bg-[#36a8c2]">
-            Tümünü Görüntüle
-          </button>
-        </div>
       </div>
       <div className="slider-container px-5">
         <Slider {...settings}>
@@ -113,4 +108,4 @@ function BestProducts() {
   );
 }
 
-export default BestProducts;
+export default ProductDetailProducts;

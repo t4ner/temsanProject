@@ -48,17 +48,14 @@ function Navbar() {
               </li>
               <li className="dropdown__item">
                 <div className="nav__link">
-                  <a to="/services">ÜRÜNLERİMİZ</a>{" "}
+                  <Link to="/services">ÜRÜNLERİMİZ</Link>{" "}
                   <i className="ri-arrow-down-s-line dropdown__arrow"></i>
                 </div>
                 <ul className="dropdown__menu z-50 font-medium">
                   <li>
-                    <a
-                      to="/equipment-supply-services"
-                      className="dropdown__link p-3"
-                    >
+                    <Link to="/category/ropes" className="dropdown__link p-3">
                       İPLER
-                    </a>
+                    </Link>
                   </li>
 
                   <li>

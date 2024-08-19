@@ -9,26 +9,56 @@ const bestProductss = [
   {
     name: "Intense Black",
     img: urun1,
+    code: "2020211",
+    quantity: "24 adet/pcs",
+    barcod: "8681917082895",
+    description:
+      "Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir. Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir",
   },
   {
     name: "Class-X Spray",
     img: urun2,
+    code: "2020211",
+    quantity: "24 adet/pcs",
+    barcod: "8681917082895",
+    description:
+      "Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir. Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir",
   },
   {
     name: "Intense Flat Set",
     img: urun3,
+    code: "2020211",
+    quantity: "24 adet/pcs",
+    barcod: "8681917082895",
+    description:
+      "Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir. Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir",
   },
   {
     name: "Intense Mop Yedek",
     img: urun4,
+    code: "2020211",
+    quantity: "24 adet/pcs",
+    barcod: "8681917082895",
+    description:
+      "Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir. Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir",
   },
   {
     name: "Intense",
     img: urun5,
+    code: "2020211",
+    quantity: "24 adet/pcs",
+    barcod: "8681917082895",
+    description:
+      "Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir. Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir",
   },
   {
     name: "Intense Spray",
     img: urun6,
+    code: "2020211",
+    quantity: "24 adet/pcs",
+    barcod: "8681917082895",
+    description:
+      "Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir. Intense Flat Mop Set zemine tam temas eden mop paleti sayesinde benzerlerine göre çok daha etkili bir temizlik imkanı verir",
   },
 ];
 
