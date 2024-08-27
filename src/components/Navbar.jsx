@@ -5,15 +5,23 @@ import { Link } from "react-router-dom";
 import logo from "/logo/temsan-logo.svg";
 
 function Navbar() {
-  const [isContactPage, setIsContactPage] = useState(false);
-
-  useEffect(() => {
-    setIsContactPage(window.location.pathname === "/contact");
-  }, []);
   const [openServices, setOpenServices] = useState(false);
   const [openTradingServices, setOpenTradingServices] = useState(false);
-
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // Adjust scrollY value as needed
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -21,11 +29,17 @@ function Navbar() {
 
   return (
     <>
-      <header>
-        <nav className="nav ">
+      <header className="">
+        <nav
+          className={`nav ${
+            scrolled ? "scrolled" : ""
+          } fixed top-0 left-0 w-full z-50 `}
+        >
           <div className="nav__data">
-            <a to="/" className="nav__logo ">
-              <img src={logo} alt="" className="h-64 mt-5" />
+            <a to="/" className="nav__logo pb-5">
+              <Link to="/">
+                <img src={logo} alt="" className="h-64 mt-5" />
+              </Link>
             </a>
             <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
               {menuOpen ? (
@@ -40,38 +54,34 @@ function Navbar() {
             className={menuOpen ? "nav__menu show-menu" : "nav__menu"}
             id="nav-menu"
           >
-            <ul className="nav__list   ">
+            <ul className="nav__list">
               <li>
-                <a to="/" className="nav__link">
+                <Link to="/" className="nav__link">
                   ANASAYFA
-                </a>
+                </Link>
               </li>
               <li className="dropdown__item">
                 <div className="nav__link">
-                  <Link to="/services">ÜRÜNLERİMİZ</Link>{" "}
+                  <p>ÜRÜNLERİMİZ</p>{" "}
                   <i className="ri-arrow-down-s-line dropdown__arrow"></i>
                 </div>
-                <ul className="dropdown__menu z-50 font-medium">
+                <ul className="dropdown__menu z-50 font-medium rounded-lg overflow-hidden">
                   <li>
                     <Link to="/category/ropes" className="dropdown__link p-3">
                       İPLER
                     </Link>
                   </li>
-
                   <li>
-                    <a
-                      to="/construction-services"
-                      href="#"
+                    <Link
+                      to="/category/pvc-coated-rope"
                       className="dropdown__link p-3"
                     >
                       PVC KAPLI İPLER
-                    </a>
+                    </Link>
                   </li>
-
                   <li>
                     <a
                       to="/construction-services"
-                      href="#"
                       className="dropdown__link p-3"
                     >
                       NAYLON İPLER
@@ -80,7 +90,6 @@ function Navbar() {
                   <li>
                     <a
                       to="/construction-services"
-                      href="#"
                       className="dropdown__link p-3"
                     >
                       PVC KAPLI ÇELİK İPLER
@@ -89,7 +98,6 @@ function Navbar() {
                   <li>
                     <a
                       to="/construction-services"
-                      href="#"
                       className="dropdown__link p-3"
                     >
                       BEZLER
@@ -98,7 +106,6 @@ function Navbar() {
                   <li>
                     <a
                       to="/construction-services"
-                      href="#"
                       className="dropdown__link p-3"
                     >
                       MOPLAR VE APARATLARI
@@ -107,7 +114,6 @@ function Navbar() {
                   <li>
                     <a
                       to="/construction-services"
-                      href="#"
                       className="dropdown__link p-3"
                     >
                       SÜNGERLER
@@ -116,28 +122,22 @@ function Navbar() {
                 </ul>
               </li>
               <li>
-                <a to="/whoweare" href="#" className="nav__link">
+                <a to="/whoweare" className="nav__link">
                   KURUMSAL
                 </a>
               </li>
-
-              {/* <li>
-              <Link to="/world-map" href="#" className="nav__link">
-                WORLD MAP
-              </Link>
-            </li> */}
               <li>
-                <a to="/contact" href="#" className="nav__link">
+                <a to="/contact" className="nav__link">
                   HABERLER
                 </a>
               </li>
               <li>
-                <a to="/contact" href="#" className="nav__link">
+                <a to="/contact" className="nav__link">
                   İLETİŞİM
                 </a>
               </li>
               <li>
-                <a to="/contact" href="#" className="nav__link">
+                <a to="/contact" className="nav__link">
                   e-KATALOG
                 </a>
               </li>
@@ -164,7 +164,6 @@ function Navbar() {
             <li>
               <div className="flex items-center">
                 <a to="/services">SERVICES</a>
-
                 <button
                   className="ml-5"
                   onClick={() => setOpenServices(!openServices)}
@@ -174,19 +173,16 @@ function Navbar() {
               </div>
             </li>
             {openServices && (
-              <div className="">
+              <div>
                 <ul className="ml-3">
                   <li>
-                    {" "}
                     <a to="/equipment-supply-services">
                       Equipment & Spare Part Supply
                     </a>
                   </li>
                   <li>
-                    {" "}
                     <a to="/construction-services">Construction Services</a>
                   </li>
-
                   <div className="flex items-center">
                     <li>
                       <a to="/trading-services">Trading Service</a>
@@ -197,14 +193,13 @@ function Navbar() {
                         setOpenTradingServices(!openTradingServices)
                       }
                     >
-                      <i className="ri-arrow-down-line font-semibold text-[#006495]"></i>{" "}
+                      <i className="ri-arrow-down-line font-semibold text-[#006495]"></i>
                     </button>
                   </div>
                   {openTradingServices && (
-                    <div className="">
+                    <div>
                       <ul className="ml-4">
                         <li>
-                          {" "}
                           <a to="/clinker-and-cement-trading">
                             Clinker & Cement Trading
                           </a>
@@ -213,7 +208,6 @@ function Navbar() {
                           <a to="/coal-trading">Coal Trading</a>
                         </li>
                         <li>
-                          {" "}
                           <a to="/alternative-fuels">
                             Alternative Fuels Trading
                           </a>
@@ -222,48 +216,32 @@ function Navbar() {
                     </div>
                   )}
                   <li>
-                    {" "}
                     <a to="/finance-solutions">Finance Solutions</a>
                   </li>
-
                   <li>
-                    {" "}
                     <a to="/project-management">PROJECT MANAGEMENT</a>
                   </li>
                   <li>
-                    {" "}
                     <a to="/consultancy">CONSULTANCY</a>
                   </li>
                   <li>
-                    {" "}
                     <a to="/engineering">ENGINEERING</a>
                   </li>
                   <li>
-                    {" "}
                     <a to="/licensing">LICENSING</a>
                   </li>
                 </ul>
               </div>
             )}
-
             <li>
-              <a to="/whoweare" href="#">
-                WHO WE ARE
-              </a>
+              <a to="/whoweare">WHO WE ARE</a>
             </li>
-            {/* <li>
-      <Link to="/world-map" href="#" className="nav__link">
-        WORLD MAP
-      </Link>
-    </li> */}
             <li>
-              <a to="/contact" href="#">
-                CONTACT
-              </a>
+              <a to="/contact">CONTACT</a>
             </li>
           </ul>
         </nav>
-        <label for="nav_check" className="hamburger">
+        <label htmlFor="nav_check" className="hamburger">
           <div></div>
           <div></div>
           <div></div>
