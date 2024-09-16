@@ -3,6 +3,7 @@ import { bestCategories } from "../data/data";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -12,7 +13,7 @@ function SampleNextArrow(props) {
       style={{
         ...style,
         display: "block",
-        background: "#36a8c2",
+        background: "#293d8d",
         borderRadius: "10px",
         marginRight: "-40px",
         zIndex: 1, // Ön planda olmalarını sağlamak için
@@ -30,7 +31,7 @@ function SamplePrevArrow(props) {
       style={{
         ...style,
         display: "block",
-        background: "#36a8c2",
+        background: "#293d8d",
         borderRadius: "10px",
         marginLeft: "-40px",
         zIndex: 1, // Ön planda olmalarını sağlamak için
@@ -83,9 +84,9 @@ function Categories() {
   };
 
   return (
-    <div style={backgroundImageStyle} className="mt-48">
+    <div className="my-48">
       <div>
-        <h3 className="w-1/2 p-16  text-5xl font-bold text-[#36a8c2] pb-20">
+        <h3 className="w-1/2 p-16  text-5xl font-bold text-[#293d8d] pb-20">
           İlginizi Çekebilecek Ürünlerimiz
         </h3>
       </div>
@@ -94,14 +95,18 @@ function Categories() {
           {bestCategories.map((d) => (
             <div
               key={d.name}
-              className="bg-white  h-[300px] text-black rounded-xl border border-[#36a8c2]"
+              className="bg-white  h-[300px] text-black rounded-xl border border-[#293d8d]"
             >
               <div className="h-56 flex justify-center items-center rounded-t-xl">
-                <img src={d.img} alt={d.name} className="h-52 rounded-full" />
+                <Link to={d.link}>
+                  <img src={d.img} alt={d.name} className="h-52 rounded-full" />
+                </Link>
               </div>
 
               <div className="flex flex-col items-center justify-center gap-4 p-4">
-                <p className="text-xl font-semibold text-[#36a8c2]">{d.name}</p>
+                <p className="text-xl font-semibold text-[#36a8c2]">
+                  <Link to={d.link}>{d.name}</Link>
+                </p>
               </div>
             </div>
           ))}

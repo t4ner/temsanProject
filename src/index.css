@@ -11,6 +11,33 @@ body {
 }
 
 .slick-dots li.slick-active button:before {
-  color: #36a8c2 !important;
+  color: #293d8d !important;
   margin-top: 4px;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slider {
+  height: 150px; /* 100px + 50px büyütme */
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.slider .slide-track {
+  animation: scroll 60s linear infinite;
+  width: calc(300px * 38); /* 150px (büyütülmüş) * 2 * 19 slide */
+}
+
+.slider img {
+  max-height: 100%;
+  max-width: 100%;
 }

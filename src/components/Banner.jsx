@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import heroImage1 from "/heroBanner/heroBanner1.jpeg";
-import heroImage2 from "/heroBanner/heroBanner2.jpeg";
+import heroImage1 from "/heroBanner/banner1.jpg";
+import heroImage2 from "/heroBanner/banner2.jpg";
 import leftIcon from "/svgIcon/leftIcon.svg";
 import rightIcon from "/svgIcon/rightIcon.svg";
 
@@ -17,7 +17,7 @@ function Banner() {
     setTextTransition(false);
     const timeoutId = setTimeout(() => {
       if (currentBgIndex === 0) {
-        setText("Temizlik Bezleri");
+        setText("Her Ev İçin");
       } else if (currentBgIndex === 1) {
         setText("Tablet Temizlik Setleri");
       }
@@ -61,7 +61,7 @@ function Banner() {
       <Navbar />
       <div className="h-full w-full flex flex-col items-center justify-center pl-16">
         <h1
-          className="text-[#1d768c] font-semibold text-[36px] md:text-[60px] leading-[50px] md:leading-[73px] mr-auto w-full"
+          className="text-white w-[800px] leading-[100px] font-extrabold text-[36px] md:text-[90px]  mx-auto text-center "
           style={textStyles}
         >
           {text}
@@ -70,15 +70,15 @@ function Banner() {
           <button onClick={handleLeftClick} className="mr-auto">
             <img src={leftIcon} alt="Previous" />
           </button>
-          <button onClick={handleRightClick} className="mr-auto">
+          <button onClick={handleRightClick} className="mr-auto text-white">
             <img src={rightIcon} alt="Next" />
           </button>
         </div>
         <div className="flex flex-col items-center mr-auto absolute bottom-0 left-16">
-          <span className="mb-8 translate-y-8 text-[#1d768c] font-semibold text-xl">
+          <span className="mb-8 translate-y-8 text-white font-semibold text-xl">
             Scroll
           </span>
-          <div className="w-1 border-l-2 border-[#1d768c] h-14"></div>
+          <div className="w-1 border-l-2 border-white h-14"></div>
         </div>
       </div>
     </section>

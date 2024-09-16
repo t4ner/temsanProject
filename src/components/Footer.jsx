@@ -7,7 +7,7 @@ import { FaSquareFacebook } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <div className="bg-[#36a8c2]">
+    <div className="bg-[#293d8d]">
       <div className="flex w-2/3 mx-auto justify-center gap-20 items-center p-16">
         <div className="flex flex-col justify-center items-center">
           <div className="flex items-center justify-center w-[70px] h-[70px] rounded-full bg-white">

@@ -5,6 +5,7 @@ import BestProducts from "../components/BestProducts";
 import BestProducts2 from "../components/BestProducts2";
 import Categories from "../components/Categories";
 import Footer from "../components/Footer";
+import SliderBrand from "../components/SliderBrand";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <BestProducts />
       <BestProducts2 />
       <Categories />
+      <SliderBrand />
       <Footer />
     </div>
   );

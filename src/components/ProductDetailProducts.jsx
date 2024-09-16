@@ -14,7 +14,7 @@ function SampleNextArrow(props) {
       style={{
         ...style,
         display: "block",
-        background: "#36a8c2",
+        background: "#293d8d",
         borderRadius: "10px",
         marginRight: "-40px",
         zIndex: 1, // Ön planda olmalarını sağlamak için
@@ -32,7 +32,7 @@ function SamplePrevArrow(props) {
       style={{
         ...style,
         display: "block",
-        background: "#36a8c2",
+        background: "#293d8d",
         borderRadius: "10px",
         marginLeft: "-40px",
         zIndex: 1, // Ön planda olmalarını sağlamak için
@@ -80,9 +80,9 @@ function ProductDetailProducts() {
   };
 
   return (
-    <div className="w-[90%] m-auto my-20">
+    <div className="w-[90%] m-auto my-20 pt-48">
       <div className="flex justify-between items-center pl-6 pr-8">
-        <h3 className="w-2/3 text-4xl font-medium text-[#36a8c2] pb-20">
+        <h3 className="w-2/3 text-4xl font-medium text-[#293d8d] pb-20">
           Benzer Ürünler
         </h3>
       </div>
@@ -90,12 +90,12 @@ function ProductDetailProducts() {
         <Slider {...settings}>
           {bestProductss.map((d) => (
             <Link to={`/product/${d.name}`} key={d.name}>
-              <div className="bg-white h-[330px] text-black rounded-xl border border-[#36a8c2]">
+              <div className="bg-white h-[330px] text-black rounded-xl border border-[#293d8d]">
                 <div className="h-56 flex justify-center items-center rounded-t-xl">
                   <img src={d.img} alt={d.name} className="h-52 rounded-full" />
                 </div>
                 <div className="flex flex-col items-center justify-center gap-4 p-4">
-                  <p className="text-xl font-semibold text-[#36a8c2]">
+                  <p className="text-xl font-semibold text-[#293d8d]">
                     {d.name}
                   </p>
                 </div>

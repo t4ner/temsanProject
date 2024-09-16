@@ -14,7 +14,7 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 .nav.scrolled {
-  background-color: #36a8c2; /* Slightly transparent white */
+  background-color: #293d8d; /* Slightly transparent white */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
 }
 
@@ -30,7 +30,6 @@
   align-items: center;
   column-gap: 0.25rem;
   font-weight: 600;
-  padding: 4px;
 }
 .nav__logo i {
   font-weight: 600;
@@ -197,7 +196,7 @@
   }
   .dropdown__item:hover .dropdown__menu {
     opacity: 1;
-    top: 4.3rem;
+    top: 5rem;
     pointer-events: initial;
     transition: top 0.3s;
     width: 270px;

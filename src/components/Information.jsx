@@ -5,12 +5,12 @@ import bubbles from "/svgIcon/bubbles.png";
 function Information() {
   return (
     <div className="relative w-full ">
-      <div className="bg-[#36a8c2] h-[453px]"></div>
+      <div className="bg-[#293d8d] h-[453px]"></div>
       <div>
         <img src={clipPath} alt="" />
       </div>
-      <div className="absolute top-12 left-[100px] text-white flex items-center justify-center">
-        <h2 className="text-5xl font-semibold basis-1/2">
+      <div className="absolute top-12 mx-auto w-full text-white flex items-center justify-center">
+        <h2 className="text-5xl font-semibold basis-1/2 pr-10">
           Temsan'ı Yakından Tanıyın.
         </h2>
         <div className="mt-16 space-y-10 text-xl font-medium">
@@ -23,7 +23,7 @@ function Information() {
             </div>
             <a
               href="/hakkimizda"
-              className="absolute bg-[#36a8c2] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+              className="absolute bg-[#293d8d] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
             >
               Hakkımızda
             </a>
@@ -37,7 +37,7 @@ function Information() {
             </div>
             <a
               href="/hakkimizda"
-              className="absolute left-0  bg-[#36a8c2] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+              className="absolute left-0  bg-[#293d8d] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
             >
               Ürünlerimiz
             </a>
@@ -51,7 +51,7 @@ function Information() {
             </div>
             <a
               href="/hakkimizda"
-              className="absolute left-0 bg-[#36a8c2] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+              className="absolute left-0 bg-[#293d8d] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
             >
               Haberler
             </a>
@@ -65,7 +65,7 @@ function Information() {
             </div>
             <a
               href="/hakkimizda"
-              className="absolute left-0  bg-[#36a8c2] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+              className="absolute left-0  bg-[#293d8d] text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
             >
               İletişim
             </a>

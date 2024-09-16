@@ -36,9 +36,9 @@ function Navbar() {
           } fixed top-0 left-0 w-full z-50 `}
         >
           <div className="nav__data">
-            <a to="/" className="nav__logo pb-5">
+            <a to="/" className="nav__logo">
               <Link to="/">
-                <img src={logo} alt="" className="h-64 mt-5" />
+                <img src={logo} alt="" className="w-64 mt-5" />
               </Link>
             </a>
             <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
@@ -80,44 +80,35 @@ function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <a
-                      to="/construction-services"
+                    <Link
+                      to="/category/nylon-ropes"
                       className="dropdown__link p-3"
                     >
                       NAYLON İPLER
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      to="/construction-services"
+                    <Link
+                      to="/category/pvc-coated-steel-ropes"
                       className="dropdown__link p-3"
                     >
                       PVC KAPLI ÇELİK İPLER
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      to="/construction-services"
-                      className="dropdown__link p-3"
-                    >
+                    <Link to="/category/cloths" className="dropdown__link p-3">
                       BEZLER
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      to="/construction-services"
-                      className="dropdown__link p-3"
-                    >
+                    <Link to="/category/mops" className="dropdown__link p-3">
                       MOPLAR VE APARATLARI
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      to="/construction-services"
-                      className="dropdown__link p-3"
-                    >
+                    <Link to="/category/sponges" className="dropdown__link p-3">
                       SÜNGERLER
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -152,7 +143,7 @@ function Navbar() {
       <div className="header">
         <div className="mb-4">
           <a className="m" to="/">
-            <img src={logo} alt="" className="h-60" />
+            <img src={logo} alt="" className="w-60" />
           </a>
         </div>
         <input type="checkbox" id="nav_check" hidden />
