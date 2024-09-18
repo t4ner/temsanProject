@@ -33,7 +33,7 @@ function ProductDetail() {
             <div className="lg:basis-1/2 flex justify-center items-center">
               <div className="flex flex-col">
                 {" "}
-                <p className="text-[#293d8d] font-medium text-lg lg:text-3xl">
+                <p className="text-[#293d8d] text-center font-medium text-lg lg:text-3xl">
                   {product.name}{" "}
                 </p>
                 <p className="text-gray-500 text-lg  pt-10">
