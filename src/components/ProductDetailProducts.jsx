@@ -95,7 +95,7 @@ function ProductDetailProducts() {
                   <img src={d.img} alt={d.name} className="h-52 rounded-full" />
                 </div>
                 <div className="flex flex-col items-center justify-center gap-4 p-4">
-                  <p className="text-xl font-semibold text-[#293d8d]">
+                  <p className="text-xl text-center font-semibold text-[#293d8d]">
                     {d.name}
                   </p>
                 </div>
