@@ -46,12 +46,12 @@ function SliderBrand() {
   ];
 
   return (
-    <div className="slider  h-[150px] m-auto overflow-hidden relative w-full  pl-5 container">
+    <div className="slider  h-[150px] m-auto overflow-hidden relative w-full  pl-5 container pt-7 lg:pt-0">
       <div className="slide-track flex items-center  space-x-5 lg:space-x-20 pl-5">
         {/* Slides dizisini iki kez birleştirerek sonsuz kaydırma efekti oluşturun */}
         {slides.concat(slides).map((src, index) => (
           <div
-            className="h-[115px] w-[230px] lg:h-[150px] lg:w-[300px] flex justify-center items-center"
+            className="h-[115px] w-[130px] lg:h-[150px] lg:w-[300px] flex justify-center items-center"
             key={index}
           >
             <img src={src} alt={`Slide ${index + 1}`} />

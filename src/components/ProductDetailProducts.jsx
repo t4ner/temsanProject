@@ -81,12 +81,12 @@ function ProductDetailProducts() {
 
   return (
     <div className="w-[90%] m-auto my-20 pt-48">
-      <div className="flex justify-between items-center pl-6 pr-8">
-        <h3 className="w-2/3 text-4xl font-medium text-[#293d8d] pb-20">
+      <div className="flex justify-between items-center pl-3 lg:pl-6 pr-8">
+        <h3 className="w-2/3 text-xl lg:text-4xl font-medium text-[#293d8d] pb-10 lg:pb-20">
           Benzer Ürünler
         </h3>
       </div>
-      <div className="slider-container px-5">
+      <div className="slider-container  lg:px-5">
         <Slider {...settings}>
           {bestProductss.map((d) => (
             <Link to={`/product/${d.name}`} key={d.name}>

@@ -84,13 +84,13 @@ function Categories() {
   };
 
   return (
-    <div className="my-48">
+    <div className="lg:my-48 px-5 lg:px-5 my-14">
       <div>
-        <h3 className="w-1/2 p-16  text-5xl font-bold text-[#293d8d] pb-20">
+        <h3 className="lg:w-1/2 lg:p-16 pb-5 text-2xl lg:text-5xl font-bold text-[#293d8d] lg:pb-20">
           İlginizi Çekebilecek Ürünlerimiz
         </h3>
       </div>
-      <div className="slider-container px-20">
+      <div className="slider-container lg:px-20">
         <Slider {...settings}>
           {bestCategories.map((d) => (
             <div

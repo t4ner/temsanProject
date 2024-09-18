@@ -80,27 +80,27 @@ function BestProducts() {
   };
 
   return (
-    <div className="w-[90%] m-auto my-20">
-      <div className="flex justify-between items-center pl-6 pr-8">
-        <h3 className="w-2/3 text-5xl font-bold text-[#293d8d] pb-20">
+    <div className="w-[90%] m-auto my-10 lg:my-20">
+      <div className="lg:flex lg:flex-row flex-col justify-between items-center lg:pl-6 lg:pr-8">
+        <h3 className="lg:w-2/3 lg:text-5xl text-2xl font-bold text-[#293d8d] pb-5 lg:pb-20">
           İhtiyacınıza Uygun Başlıca Ürünlerimiz
         </h3>
         <div className="">
-          <button className="px-5 py-3 rounded-3xl text-2xl font-semibold text-white bg-[#293d8d]">
-            Tümünü Görüntüle
+          <button className="px-4 py-2 lg:px-5 lg:py-3 rounded-3xl lg:text-2xl font-medium lg:font-semibold text-white bg-[#293d8d]">
+            <Link to="/category/ropes">Tümünü Görüntüle</Link>{" "}
           </button>
         </div>
       </div>
-      <div className="slider-container px-5">
+      <div className="slider-container lg:px-5 mt-8 lg:mt-0">
         <Slider {...settings}>
           {bestProductss.map((d) => (
             <Link to={`/product/${d.name}`} key={d.name}>
               <div className="bg-white h-[330px] text-black rounded-xl border border-[#293d8d]">
                 <div className="flex justify-center items-center rounded-t-xl">
-                  <img src={d.img} alt={d.name} className="h-52 w-52 bg-cover" />
+                  <img src={d.img} alt={d.name} className="w-80" />
                 </div>
                 <div className="flex flex-col items-center justify-center gap-4 p-4">
-                  <p className="text-xl font-semibold text-[#293d8d]">
+                  <p className="text-xl font-semibold text-[#293d8d] text-center">
                     {d.name}
                   </p>
                 </div>

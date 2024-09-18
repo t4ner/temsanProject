@@ -59,9 +59,9 @@ function Banner() {
       style={styles}
     >
       <Navbar />
-      <div className="h-full w-full flex flex-col items-center justify-center pl-16">
+      <div className="h-full w-full flex flex-col lg:items-center lg:justify-center pl-16">
         <h1
-          className="text-white w-[800px] leading-[100px] font-extrabold text-[36px] md:text-[90px]  mx-auto text-center "
+          className="text-white lg:w-[800px] leading-[100px] font-extrabold text-[60px] md:text-[90px] mt-20 lg:mt-0  mx-auto lg:text-center "
           style={textStyles}
         >
           {text}

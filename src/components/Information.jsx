@@ -5,15 +5,15 @@ import bubbles from "/svgIcon/bubbles.png";
 function Information() {
   return (
     <div className="relative w-full ">
-      <div className="bg-[#293d8d] h-[453px]"></div>
+      <div className="bg-[#293d8d] h-[600px] lg:h-[453px]"></div>
       <div>
         <img src={clipPath} alt="" />
       </div>
-      <div className="absolute top-12 mx-auto w-full text-white flex items-center justify-center">
-        <h2 className="text-5xl font-semibold basis-1/2 pr-10">
+      <div className="absolute top-12 mx-auto w-full text-white lg:flex lg:flex-row flex-col items-center justify-center">
+        <h2 className="text-2xl lg:text-5xl font-semibold basis-1/2 pr-10 px-5 lg:px-0">
           Temsan'ı Yakından Tanıyın.
         </h2>
-        <div className="mt-16 space-y-10 text-xl font-medium">
+        <div className="mt-16 space-y-10 lg:text-xl font-medium px-5 lg:px-0">
           <div className="relative border-b-2 pb-8 flex space-x-4 group">
             <div className="flex items-center space-x-4 transition-transform duration-300 ease-in-out group-hover:opacity-0">
               <p className="transition-opacity duration-800 ease-in-out">

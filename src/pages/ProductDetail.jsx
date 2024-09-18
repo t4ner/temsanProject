@@ -21,19 +21,19 @@ function ProductDetail() {
         <div className="bg-[#293d8d] h-[350px] w-full">
           <Navbar />
         </div>
-        <div className=" w-5/6 bg-white absolute top-[33%] mx-auto rounded-[40px] ">
-          <div className="flex justify-between p-20">
-            <div className="basis-1/2">
+        <div className=" w-5/6 bg-white absolute top-[20%] lg:top-[33%] mx-auto rounded-[40px] ">
+          <div className="flex-col justify-between lg:p-20">
+            <div className="lg:basis-1/2">
               <img
                 src={product.img}
                 alt={product.name}
                 className="h-[400px]  rounded-full"
               />
             </div>
-            <div className="basis-1/2 flex justify-center items-center">
+            <div className="lg:basis-1/2 flex justify-center items-center">
               <div className="flex flex-col">
                 {" "}
-                <p className="text-[#293d8d] font-medium text-3xl">
+                <p className="text-[#293d8d] font-medium text-lg lg:text-3xl">
                   {product.name}{" "}
                 </p>
                 <p className="text-gray-500 text-lg  pt-10">
@@ -44,7 +44,7 @@ function ProductDetail() {
           </div>
 
           <div className=" ">
-            <div className="text-center mx-auto w-2/3 space-x-20 text-2xl text-[#293d8d] font-medium">
+            <div className="text-center mx-auto lg:w-2/3 space-x-20 text-xl lg:text-2xl text-[#293d8d] font-medium">
               <button
                 onClick={() => setActiveTab("features")}
                 className={`p-2 ${
@@ -63,48 +63,48 @@ function ProductDetail() {
               )}
               {activeTab === "features" && (
                 <div className="flex flex-col justify-center items-center">
-                  <div className=" grid grid-cols-[auto_1fr_auto] gap-4">
-                    <div className="text-[#293d8d] font-medium text-xl">
+                  <div className=" grid grid-cols-[auto_1fr_auto] gap-y-4">
+                    <div className="text-[#293d8d] font-medium lg:text-xl">
                       Ürün Adı
                     </div>
                     <div className=" border-gray-300 px-5">:</div>
-                    <div className="text-gray-500  text-xl">{product.name}</div>
+                    <div className="text-gray-500  lg:text-xl">{product.name}</div>
 
-                    <div className="text-[#293d8d] font-medium text-xl">
+                    <div className="text-[#293d8d] font-medium lg:text-xl">
                       Ürün Kodu
                     </div>
                     <div className=" border-gray-300 px-5">:</div>
-                    <div className="text-gray-500 text-xl">{product.code}</div>
+                    <div className="text-gray-500 lg:text-xl">{product.code}</div>
 
-                    <div className="text-[#293d8d] font-medium text-xl">
+                    <div className="text-[#293d8d] font-medium lg:text-xl">
                       Koli İçi Adet
                     </div>
                     <div className=" px-5 border-gray-300">:</div>
-                    <div className="text-gray-500 text-xl">
+                    <div className="text-gray-500 lg:text-xl">
                       {product.quantity}
                     </div>
 
-                    <div className="text-[#293d8d] font-medium text-xl">
-                      Kutu Ağırlığı KG
+                    <div className="text-[#293d8d] font-medium lg:text-xl">
+                      Kutu Ağırlığı 
                     </div>
                     <div className="px-5 border-gray-300">:</div>
                     <div className="text-gray-500  text-xl">
-                      {product.boxWeight}
+                      {product.boxWeight} KG
                     </div>
 
-                    <div className="text-[#293d8d] font-medium text-xl">
+                    <div className="text-[#293d8d] font-medium lg:text-xl">
                       Kutu Boyutu
                     </div>
                     <div className="px-5 border-gray-300">:</div>
-                    <div className="text-gray-500  text-xl">
+                    <div className="text-gray-500  lg:text-xl">
                       {product.boxSize}
                     </div>
 
-                    <div className="text-[#293d8d] font-medium text-xl">
+                    <div className="text-[#293d8d] font-medium lg:text-xl">
                       Hacim M3
                     </div>
                     <div className="px-5 border-gray-300">:</div>
-                    <div className="text-gray-500  text-xl">
+                    <div className="text-gray-500  lg:text-xl">
                       {product.volume}
                     </div>
                   </div>
@@ -114,10 +114,10 @@ function ProductDetail() {
           </div>
         </div>
       </div>
-      <div className="pt-[650px]">
+      <div className="pt-[480px] lg:pt-[650px]">
         <ProductDetailProducts />
       </div>
-      <div className="pt-[140px]">
+      <div className="pt-[80px] lg:pt-[140px]">
         <Footer />
       </div>
     </>

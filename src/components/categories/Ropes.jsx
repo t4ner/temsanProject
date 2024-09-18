@@ -13,14 +13,14 @@ function Ropes() {
           <div className="bg-[#293d8d] h-[350px] w-full">
             <Navbar />
           </div>
-          <div className=" w-[95%] bg-white absolute top-[33%] mx-auto rounded-[40px] ">
-            <div className="flex justify-between items-start gap-5  p-10">
+          <div className=" w-[95%] bg-white absolute top-[20%] lg:top-[33%] mx-auto rounded-[40px] ">
+            <div className="lg:flex lg:flex-row flex-col justify-between items-start gap-5  p-10">
               <div className=" border border-[#293d8d] rounded-xl flex-grow p-5">
                 <div className="">
                   <h3 className="text-[#293d8d] text-2xl text-center">
                     KATEGORİLER{" "}
                   </h3>
-                  <div className="font-medium text-[#293d8d] mt-10 space-y-10">
+                  <div className="font-medium text-[#293d8d] mt-10 lg:space-y-10 space-y-5">
                     <div className="flex items-center gap-x-2 ">
                       {" "}
                       <Link to="/category/ropes">
@@ -77,11 +77,11 @@ function Ropes() {
                 </div>
               </div>
 
-              <div className=" flex flex-wrap basis-3/4 text-center justify-between  gap-4">
+              <div className=" flex flex-wrap lg:basis-3/4 text-center justify-between mt-4 lg:mt-0 gap-4">
                 {ropesCategory.map((r, id) => (
                   <Link to={`/product/${r.name}`} key={r.name}>
                     <div
-                      className="border h-[300px] border-[#293d8d] rounded-xl w-72 flex flex-col items-center justify-center p-5"
+                      className="border h-[300px] border-[#293d8d] rounded-xl lg:w-72 flex flex-col items-center justify-center p-5"
                       key={id}
                     >
                       <img src={r.img} alt={r.name} className="h-48" />
@@ -94,7 +94,7 @@ function Ropes() {
           </div>
         </div>
       </>
-      <div className="mt-[900px]">
+      <div className="mt-[3800px]">
         <Footer />
       </div>
     </div>

@@ -17,21 +17,23 @@ function App() {
     window.scrollTo(0, 0);
   }, [location]);
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/product/:productName" element={<ProductDetail />} />{" "}
-      <Route path="/category/ropes" element={<Ropes />} />
-      <Route path="/category/pvc-coated-rope" element={<PvcCoatedRope />} />
-      <Route path="/category/nylon-ropes" element={<NylonRopes />} />
-      <Route
-        path="/category/pvc-coated-steel-ropes"
-        element={<PvcCoatedSteelRopes />}
-      />
-      <Route path="/category/cloths" element={<Cloths />} />
-      <Route path="/category/mops" element={<Mops />} />
-      <Route path="/category/sponges" element={<Sponges />} />
-      {/* Ürün detay sayfası */}
-    </Routes>
+    <div className="overflow-x-hidden">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product/:productName" element={<ProductDetail />} />{" "}
+        <Route path="/category/ropes" element={<Ropes />} />
+        <Route path="/category/pvc-coated-rope" element={<PvcCoatedRope />} />
+        <Route path="/category/nylon-ropes" element={<NylonRopes />} />
+        <Route
+          path="/category/pvc-coated-steel-ropes"
+          element={<PvcCoatedSteelRopes />}
+        />
+        <Route path="/category/cloths" element={<Cloths />} />
+        <Route path="/category/mops" element={<Mops />} />
+        <Route path="/category/sponges" element={<Sponges />} />
+        {/* Ürün detay sayfası */}
+      </Routes>
+    </div>
   );
 }
 

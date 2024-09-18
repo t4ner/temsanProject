@@ -142,19 +142,19 @@ function Navbar() {
 
       <div className="header">
         <div className="mb-4">
-          <a className="m" to="/">
+          <Link to="/">
             <img src={logo} alt="" className="w-60" />
-          </a>
+          </Link>
         </div>
         <input type="checkbox" id="nav_check" hidden />
         <nav className="z-50">
           <ul>
             <li>
-              <a to="/">HOME</a>
+              <Link to="/">ANASAYFA</Link>
             </li>
             <li>
               <div className="flex items-center">
-                <a to="/services">SERVICES</a>
+                <p>ÜRÜNLERİMİZ</p>
                 <button
                   className="ml-5"
                   onClick={() => setOpenServices(!openServices)}
@@ -167,68 +167,40 @@ function Navbar() {
               <div>
                 <ul className="ml-3">
                   <li>
-                    <a to="/equipment-supply-services">
-                      Equipment & Spare Part Supply
-                    </a>
+                    <Link to="/category/ropes">İPLER</Link>
                   </li>
                   <li>
-                    <a to="/construction-services">Construction Services</a>
+                    <Link to="/category/pvc-coated-rope">PVC KAPLI İPLER</Link>
                   </li>
-                  <div className="flex items-center">
-                    <li>
-                      <a to="/trading-services">Trading Service</a>
-                    </li>
-                    <button
-                      className="ml-5"
-                      onClick={() =>
-                        setOpenTradingServices(!openTradingServices)
-                      }
-                    >
-                      <i className="ri-arrow-down-line font-semibold text-[#006495]"></i>
-                    </button>
-                  </div>
-                  {openTradingServices && (
-                    <div>
-                      <ul className="ml-4">
-                        <li>
-                          <a to="/clinker-and-cement-trading">
-                            Clinker & Cement Trading
-                          </a>
-                        </li>
-                        <li>
-                          <a to="/coal-trading">Coal Trading</a>
-                        </li>
-                        <li>
-                          <a to="/alternative-fuels">
-                            Alternative Fuels Trading
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  )}
+
                   <li>
-                    <a to="/finance-solutions">Finance Solutions</a>
+                    <Link to="/category/nylon-ropes">NAYLON İPLER</Link>
                   </li>
                   <li>
-                    <a to="/project-management">PROJECT MANAGEMENT</a>
+                    <Link to="/category/pvc-coated-steel-ropes">
+                      PVC KAPLI ÇELİK İPLER
+                    </Link>
                   </li>
                   <li>
-                    <a to="/consultancy">CONSULTANCY</a>
+                    <Link to="/category/cloths">BEZLER</Link>
                   </li>
                   <li>
-                    <a to="/engineering">ENGINEERING</a>
+                    <Link to="/category/mops">MOPLAR VE APARATLARI</Link>
                   </li>
                   <li>
-                    <a to="/licensing">LICENSING</a>
+                    <Link to="/category/sponges">SÜNGERLER</Link>
                   </li>
                 </ul>
               </div>
             )}
             <li>
-              <a to="/whoweare">WHO WE ARE</a>
+              <a to="/whoweare">KURUMSAL</a>
             </li>
             <li>
-              <a to="/contact">CONTACT</a>
+              <a to="/contact">HABERLER</a>
+            </li>
+            <li>
+              <a to="/contact">İLETİŞİM</a>
             </li>
           </ul>
         </nav>
