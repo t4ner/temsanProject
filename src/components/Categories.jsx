@@ -104,7 +104,7 @@ function Categories() {
               </div>
 
               <div className="flex flex-col items-center justify-center gap-4 p-4">
-                <p className="text-xl font-semibold text-[#36a8c2]">
+                <p className="text-xl font-semibold text-[#293d8d]">
                   <Link to={d.link}>{d.name}</Link>
                 </p>
               </div>
