@@ -94,7 +94,7 @@ function Cloths() {
           </div>
         </div>
       </>
-      <div className="mt-[8890px]">
+      <div className="mt-[8890px] lg:mt-[2510px]">
         <Footer />
       </div>
     </div>

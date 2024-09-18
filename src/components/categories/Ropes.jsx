@@ -94,7 +94,7 @@ function Ropes() {
           </div>
         </div>
       </>
-      <div className="mt-[3800px]">
+      <div className="mt-[3800px] lg:mt-[910px]">
         <Footer />
       </div>
     </div>

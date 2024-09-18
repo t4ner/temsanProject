@@ -94,7 +94,7 @@ function NylonRopes() {
         </div>
       </div>
     </>
-    <div className="mt-[980px]">
+    <div className="mt-[980px] lg:-mt-[25px]">
       <Footer />
     </div>
   </div>

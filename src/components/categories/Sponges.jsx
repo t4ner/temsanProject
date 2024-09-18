@@ -94,7 +94,7 @@ function Sponges() {
           </div>
         </div>
       </>
-      <div className="mt-[5740px]">
+      <div className="mt-[5740px] lg:mt-[1570px]">
         <Footer />
       </div>
     </div>

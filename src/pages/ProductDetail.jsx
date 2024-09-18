@@ -17,12 +17,12 @@ function ProductDetail() {
 
   return (
     <>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center pb-10">
         <div className="bg-[#293d8d] h-[350px] w-full">
           <Navbar />
         </div>
         <div className=" w-5/6 bg-white absolute top-[20%] lg:top-[33%] mx-auto rounded-[40px] ">
-          <div className="flex-col justify-between lg:p-20">
+          <div className="lg:flex lg:flex-row flex-col justify-between lg:p-20">
             <div className="lg:basis-1/2">
               <img
                 src={product.img}

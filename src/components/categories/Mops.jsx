@@ -94,7 +94,7 @@ function Mops() {
         </div>
       </div>
     </>
-    <div className="mt-[7940px]">
+    <div className="mt-[7940px] lg:mt-[2200px]">
       <Footer />
     </div>
   </div>

@@ -94,7 +94,7 @@ function PvcCoatedSteelRopes() {
         </div>
       </div>
     </>
-    <div className="mt-[1940px]">
+    <div className="mt-[1940px] lg:mt-[280px]">
       <Footer />
     </div>
   </div>

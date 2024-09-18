@@ -1,46 +1,51 @@
 import React, { useState, useEffect } from "react";
 import heroImage1 from "/heroBanner/banner1.jpg";
 import heroImage2 from "/heroBanner/banner2.jpg";
-import leftIcon from "/svgIcon/leftIcon.svg";
-import rightIcon from "/svgIcon/rightIcon.svg";
+import heroImage3 from "/heroBanner/banner3.jpg";
+import heroImage4 from "/heroBanner/banner4.jpg";
+import heroImage5 from "/heroBanner/banner5.jpg";
 
 import Navbar from "./Navbar";
 
 function Banner() {
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
-  const backgrounds = [heroImage1, heroImage2];
-  const [text, setText] = useState("Temizlik Bezleri");
-  const [textTransition, setTextTransition] = useState(true);
+  const backgrounds = [
+    heroImage1,
+    heroImage2,
+    heroImage3,
+    heroImage4,
+    heroImage5,
+  ];
+  const [text, setText] = useState();
+  const [textTransition, setTextTransition] = useState(false);
 
-  // Effect to update text when currentBgIndex changes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBgIndex((prevIndex) =>
+        prevIndex === backgrounds.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   useEffect(() => {
     setTextTransition(false);
-    const timeoutId = setTimeout(() => {
+    setTimeout(() => {
       if (currentBgIndex === 0) {
         setText("Her Ev İçin");
       } else if (currentBgIndex === 1) {
-        setText("Tablet Temizlik Setleri");
+        setText("Her Ev İçin");
+      } else if (currentBgIndex === 2) {
+        setText("Her Ev İçin");
+      } else {
+        setText("Her Ev İçin");
       }
       setTextTransition(true);
-    }, 700); // Match with text transition duration
-    return () => clearTimeout(timeoutId);
+    }, 700);
   }, [currentBgIndex]);
 
-  // Function to handle left click
-  const handleLeftClick = () => {
-    setCurrentBgIndex((prevIndex) =>
-      prevIndex === 0 ? backgrounds.length - 1 : prevIndex - 1
-    );
-  };
+  useEffect(() => {}, [currentBgIndex]);
 
-  // Function to handle right click
-  const handleRightClick = () => {
-    setCurrentBgIndex((prevIndex) =>
-      prevIndex === backgrounds.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  // Inline styles for background image and text transition
   const styles = {
     backgroundImage: `url(${backgrounds[currentBgIndex]})`,
     backgroundSize: "cover",
@@ -55,31 +60,17 @@ function Banner() {
 
   return (
     <section
-      className="h-screen w-full relative bg-center bg-cover md:bg-center"
+      className="h-[440px] lg:h-screen w-full relative bg-left md:bg-center"
       style={styles}
     >
       <Navbar />
-      <div className="h-full w-full flex flex-col lg:items-center lg:justify-center pl-16">
+      <div className="h-full w-full flex flex-col items-center justify-center  pl-1">
         <h1
-          className="text-white lg:w-[800px] leading-[100px] font-extrabold text-[60px] md:text-[90px] mt-20 lg:mt-0  mx-auto lg:text-center "
+          className="text-white  text-center font-semibold text-[36px] md:text-[66px] leading-[50px] md:leading-[73px] mr-auto w-full md:w-3/4 shadowText  mx-auto"
           style={textStyles}
         >
           {text}
         </h1>
-        <div className="mr-auto flex gap-5 pl-2 pt-10">
-          <button onClick={handleLeftClick} className="mr-auto">
-            <img src={leftIcon} alt="Previous" />
-          </button>
-          <button onClick={handleRightClick} className="mr-auto text-white">
-            <img src={rightIcon} alt="Next" />
-          </button>
-        </div>
-        <div className="flex flex-col items-center mr-auto absolute bottom-0 left-16">
-          <span className="mb-8 translate-y-8 text-white font-semibold text-xl">
-            Scroll
-          </span>
-          <div className="w-1 border-l-2 border-white h-14"></div>
-        </div>
       </div>
     </section>
   );
