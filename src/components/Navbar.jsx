@@ -5,6 +5,16 @@ import { Link } from "react-router-dom";
 import logo from "/logo/temsan-logo.svg";
 
 function Navbar() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/katalog/temsan.pdf"; // PDF dosyanızın yolu
+    link.target = "_blank";
+    link.download = "temsan.pdf"; // İndirilen dosyanın adı
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const [openServices, setOpenServices] = useState(false);
   const [openTradingServices, setOpenTradingServices] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -128,9 +138,9 @@ function Navbar() {
                 </a>
               </li>
               <li>
-                <a to="/contact" className="nav__link">
+                <button onClick={handleDownload} className="nav__link">
                   e-KATALOG
-                </a>
+                </button>
               </li>
               <li>
                 <a href="#" className="nav__link"></a>
@@ -201,6 +211,9 @@ function Navbar() {
             </li>
             <li>
               <a to="/contact">İLETİŞİM</a>
+            </li>
+            <li>
+              <button onClick={handleDownload}>e-KATALOG</button>
             </li>
           </ul>
         </nav>
