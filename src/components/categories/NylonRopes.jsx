@@ -77,7 +77,7 @@ function NylonRopes() {
               </div>
             </div>
 
-            <div className=" flex flex-wrap lg:basis-3/4 text-center justify-between mt-4 lg:mt-0 gap-4">
+            <div className=" flex flex-wrap lg:basis-3/4 text-center  mt-4 lg:mt-0 gap-4">
               {nylonRopes.map((r, id) => (
                 <Link to={`/product/${r.name}`} key={r.name}>
                   <div

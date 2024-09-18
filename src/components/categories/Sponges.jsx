@@ -77,7 +77,7 @@ function Sponges() {
                 </div>
               </div>
 
-              <div className=" flex flex-wrap lg:basis-3/4 text-center justify-between mt-4 lg:mt-0 gap-4">
+              <div className=" flex flex-wrap lg:basis-3/4 text-center mt-4 lg:mt-0 gap-4">
                 {spongesCategory.map((r, id) => (
                   <Link to={`/product/${r.name}`} key={r.name}>
                     <div
